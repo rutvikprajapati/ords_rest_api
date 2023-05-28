@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "7d991bbf-5101-42c6-a2f4-fa8ba50d6214",
+		"name": "ORDS HR/V1/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1311187"
+	},
+	"item": [
+		{
+			"name": "1. Get emps",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v1/employees/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v1",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Create Emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee_id\": 999,\r\n    \"first_name\": \"Rutvik\",\r\n    \"last_name\": \"Prajapati\",\r\n    \"email\": \"RPRAJAPATI\",\r\n    \"phone_number\": \"515.123.4444\",\r\n    \"hire_date\": \"2023/05/01\",\r\n    \"job_id\": \"AD_ASST\",\r\n    \"salary\": 4400,\r\n    \"commission_pct\": null,\r\n    \"manager_id\": 101,\r\n    \"department_id\": 10\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v1/employees/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v1",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Update emp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Rutvik\",\r\n    \"last_name\": \"Prajapati\",\r\n    \"email\": \"RPRAJAPATI\",\r\n    \"phone_number\": \"515.123.4444\",\r\n    \"hire_date\": \"2023/05/01\",\r\n    \"job_id\": \"AD_ASST\",\r\n    \"salary\": 4400,\r\n    \"commission_pct\": null,\r\n    \"manager_id\": 101,\r\n    \"department_id\": 10\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v1/employees/999",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v1",
+						"employees",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Delete emp",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v1/employees/999",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v1",
+						"employees",
+						"999"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

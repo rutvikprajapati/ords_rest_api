@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "b9826143-2531-4774-8238-205680ca0dd2",
+		"name": "ORDS HR/V2/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1311187"
+	},
+	"item": [
+		{
+			"name": "1. Get emp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get single emp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/999",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Create emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"employee_id\": 999,\r\n    \"first_name\": \"Rutvik\",\r\n    \"last_name\": \"Prajapati\",\r\n    \"email\": \"RPRAJAPATI\",\r\n    \"phone_number\": \"515.123.4444\",\r\n    \"hire_date\": \"2023/05/01\",\r\n    \"job_id\": \"AD_ASST\",\r\n    \"salary\": 4400,\r\n    \"commission_pct\": null,\r\n    \"manager_id\": 101,\r\n    \"department_id\": 10\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Update emp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Rutvik\",\r\n    \"last_name\": \"Prajapati\",\r\n    \"email\": \"RPRAJAPATI\",\r\n    \"phone_number\": \"515.123.4444\",\r\n    \"hire_date\": \"2023/05/01\",\r\n    \"job_id\": \"AD_ASST\",\r\n    \"salary\": 4400,\r\n    \"commission_pct\": null,\r\n    \"manager_id\": 101,\r\n    \"department_id\": 10\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/999",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Delete emp",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/999",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Update Photo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "mime_type",
+						"value": "image/png",
+						"type": "text"
+					},
+					{
+						"key": "file_name",
+						"value": "999",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "GCJcX_ZAb/999_1.png"
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/999/photo/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						"999",
+						"photo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Get photo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ords/apidemo/hr/v2/employees/999/photo/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ords",
+						"apidemo",
+						"hr",
+						"v2",
+						"employees",
+						"999",
+						"photo",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
