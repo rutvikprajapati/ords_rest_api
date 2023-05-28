@@ -13,7 +13,8 @@ To ensure the proper execution and setup of the components mentioned, please fol
 4. Create hr/v1/ REST Module.
 5. Create hr/v2/ REST Module.
 6. Script to create client for OAuth2.0: Prepare the script that creates a client for OAuth2.0 authentication. This step involves generating a client ID and client secret, which will be used for requesting access tokens.
-7. Postman Collection for hr/v1 module. Create "base_url" environmnet variable in Postman.
+7. Postman Collection for hr/v1 module. Create "base_url" environmnet variabl in Postman.
 8. Postman Collection for hr/v2 module.
 
 By executing the script in the given order, you will set up the necessary database structures, create the API packages, configure the REST modules, and establish the Postman collections for testing and interacting with the APIs.
+[Mastering REST API using Oracle APEX (INOAUG Xplore - May 2023)](https://www.youtube.com/watch?v=zfnneRc4hw8)
